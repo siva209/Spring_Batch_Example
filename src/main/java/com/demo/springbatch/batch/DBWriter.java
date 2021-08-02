@@ -23,7 +23,11 @@ public class DBWriter implements ItemWriter<User> {
     @Override
     public void write(List<? extends User> users) throws Exception{
         System.out.println("Data Saved for Users: " + users);
-        userRepository.saveAll(users);
+        for (User user : users) {
+			System.out.println(user);
+			userRepository.save(user);
+		}
+//        userRepository.saveAll(users);
     }
 }
 

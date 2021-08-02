@@ -2,12 +2,11 @@ package com.demo.springbatch.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import javax.persistence.Table;
 
 import java.util.Date;
 
 @Entity
-
 public class User {
 
     @Id
